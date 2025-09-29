@@ -1,0 +1,144 @@
+/*
+ * Palet Warna:
+ * 1B3C53 - Dark Blue
+ * 234C6A - Medium Blue
+ * 456882 - Light Blue / Greyish Blue
+ * D2C1B6 - Beige / Light Brown
+ */
+
+/* Custom CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #456882;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1B3C53 !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #D2C1B6 !important;
+}
+
+.navbar-nav {
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+    color: #D2C1B6 !important;
+}
+
+.navbar .nav-link.active {
+    color: #1B3C53 !important;
+    font-weight: bold;
+}
+
+/* Styling for the Active Bubble Highlight */
+#active-bubble {
+    position: absolute;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #456882;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    color: #D2C1B6;
+}
+
+.carousel-caption h5 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+    .carousel-item img {
+        height: 50vh;
+    }
+}
+
+/* Sections */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#about, #portfolio {
+    background-color: #D2C1B6;
+}
+
+#timeline {
+    background-color: #f8f9fa;
+}
+
+/* Timeline Grid Styling */
+.timeline-box {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.timeline-box:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.timeline-box ul {
+    list-style-type: '— ';
+    padding-left: 20px;
+}
+
+.timeline-box ul li {
+    margin-bottom: 5px;
+    word-wrap: break-word; /* Solusi agar teks tidak keluar container */
+}
+
+
+/* Card and Button Styling */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #234C6A;
+    border-color: #234C6A;
+}
+
+.btn-primary:hover {
+    background-color: #1B3C53;
+    border-color: #1B3C53;
+}
+
+/* Footer */
+footer {
+    background-color: #1B3C53 !important;
+    color: #D2C1B6 !important;
+    font-size: 0.9rem;
+}

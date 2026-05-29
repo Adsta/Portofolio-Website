@@ -1,75 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+/* Masthead scroll state */
+const mast = document.getElementById('masthead');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 60;
+  mast.classList.toggle('scrolled', scrolled);
+  document.body.classList.toggle('scrolled', scrolled);
+}, { passive: true });
 
-    // --- Efek Highlight Bubble pada Navbar ---
-    const sections = document.querySelectorAll('#about, #timeline, #portfolio, #contact');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    const activeBubble = document.getElementById('active-bubble');
-    const navUl = document.querySelector('.navbar-nav');
-
-    function updateActiveBubble() {
-        if (!navUl || !activeBubble) return;
-
-        let activeLink = null;
-        
-        sections.forEach(section => {
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const sectionTop = section.offsetTop - navbarHeight - 50;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === `#${section.id}`) {
-                        activeLink = link;
-                    }
-                });
-            }
-        });
-        
-        if (activeLink) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            activeLink.classList.add('active');
-            
-            const linkRect = activeLink.getBoundingClientRect();
-            const navUlRect = navUl.getBoundingClientRect();
-            
-            const leftPosition = linkRect.left - navUlRect.left;
-            
-            activeBubble.style.transform = `translateY(-50%) translateX(${leftPosition}px)`;
-            activeBubble.style.width = `${linkRect.width}px`;
-        } else {
-             activeBubble.style.width = '0px';
-        }
+/* Typewriter — calm cadence */
+(function () {
+  const phrases = [
+    'studying Industrial Engineering at BINUS.',
+    'designing prototypes in CAD/CAM.',
+    'building games in Unity & C#.',
+    'optimizing processes with Python & SQL.',
+    'looking for what comes next.'
+  ];
+  const el = document.getElementById('typed');
+  if (!el) return;
+  let pi = 0, ci = 0, deleting = false;
+  function tick () {
+    const phrase = phrases[pi];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ++ci);
+      if (ci === phrase.length) { deleting = true; return setTimeout(tick, 2400); }
+    } else {
+      el.textContent = phrase.slice(0, --ci);
+      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
     }
-    
-    updateActiveBubble();
+    setTimeout(tick, deleting ? 35 : 60);
+  }
+  setTimeout(tick, 1400);
+})();
 
-    window.addEventListener('scroll', updateActiveBubble);
-    window.addEventListener('resize', updateActiveBubble);
+/* Scroll reveals (Intersection Observer) */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { 
+    if (e.isIntersecting) { 
+      e.target.classList.add('in'); 
+      io.unobserve(e.target); 
+    } 
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    // Form validation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            if (name && email && message) {
-                alert('Pesan Anda berhasil dikirim! Terima kasih.');
-                contactForm.reset();
-            } else {
-                alert('Silakan lengkapi semua field!');
-            }
-        });
-    }
-});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));

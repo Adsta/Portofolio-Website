@@ -719,7 +719,7 @@ body.scrolled .hero-corner-tr { opacity: 0; pointer-events: none; }
   top: 16px; left: 16px;
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--paper);
+  color: var(--ink-2);
   background: rgba(0,0,0,0.55);
   backdrop-filter: blur(6px);
   padding: 4px 10px;

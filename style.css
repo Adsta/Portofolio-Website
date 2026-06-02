@@ -298,7 +298,7 @@ body.scrolled .hero-corner-tr { opacity: 0; pointer-events: none; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* ──────────────────────────────────────
-   MANIFESTO / STATEMENT
+   MANIFESTO
 ─────────────────────────────────────── */
 .manifesto {
   position: relative;

@@ -42,6 +42,9 @@ function TweaksApp() {
   );
 }
 
-const tweaksRoot = document.createElement('div');
-document.body.appendChild(tweaksRoot);
-ReactDOM.createRoot(tweaksRoot).render(<TweaksApp />);
+/* Only mount when the Claude Design tweaks runtime is loaded */
+if (typeof useTweaks !== 'undefined' && typeof TweaksPanel !== 'undefined') {
+  const tweaksRoot = document.createElement('div');
+  document.body.appendChild(tweaksRoot);
+  ReactDOM.createRoot(tweaksRoot).render(<TweaksApp />);
+}

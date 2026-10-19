@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Made Adistha Subaga — Index</title>
+  <title>Made Adistha Subaga — Industrial Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Made Adistha Subaga, Industrial Engineering student at BINUS University: CAD/CAM engineering, process improvement, and game development.">
+  <script>
+    document.documentElement.classList.add('js');
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -17,570 +22,296 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#siteNav" data-bs-root-margin="0px 0px -60%">
 
-  <header class="masthead" id="masthead">
-    <nav class="navbar navbar-expand-lg">
-      <a href="#top" class="navbar-brand masthead-monogram">M. A. S.</a>
-      <button class="navbar-toggler masthead-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#mastheadNav" aria-controls="mastheadNav" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-      </button>
-      <div class="collapse navbar-collapse" id="mastheadNav">
-        <div class="navbar-nav mx-auto masthead-center">
-          <a href="#manifesto"  class="nav-link masthead-link">01 — Statement</a>
-          <a href="#about"      class="nav-link masthead-link">02 — About</a>
-          <a href="#experience" class="nav-link masthead-link">03 — Experience</a>
-          <a href="#work"       class="nav-link masthead-link">04 — Work</a>
-          <a href="#contact"    class="nav-link masthead-link">05 — Contact</a>
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-md" aria-label="Main">
+      <div class="container">
+        <a href="#top" class="navbar-brand">Made Adistha Subaga</a>
+        <div class="d-flex align-items-center gap-3 ms-auto ms-md-4 order-md-last">
+          <button type="button" class="theme-switch" id="themeSwitch" role="switch" aria-checked="false">
+            <span class="theme-switch-track" aria-hidden="true">
+              <svg class="icon-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>
+              <svg class="icon-moon" viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 10.2A6 6 0 0 1 5.8 2.5a6 6 0 1 0 7.7 7.7z"/></svg>
+              <span class="theme-switch-knob"></span>
+            </span>
+            <span class="visually-hidden">Dark mode</span>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+                  aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         </div>
-        <a href="https://binusianorg-my.sharepoint.com/personal/made_subaga_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQBMxfUKrtHSTbD978OrAGoyAfgr2kdaMogI4ihSwrYRbgY&rtime=cph4cLu83kg"
-           target="_blank" rel="noopener" class="masthead-cv">
-          Download CV
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-        </a>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <div class="navbar-nav ms-auto">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#work" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          <a href="https://binusianorg-my.sharepoint.com/personal/made_subaga_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQBMxfUKrtHSTbD978OrAGoyAfgr2kdaMogI4ihSwrYRbgY&rtime=cph4cLu83kg"
+             target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm nav-cv">Download CV</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <section class="hero" id="top">
-    <div class="hero-corner hero-corner-tl">
-      Index · <strong>26 / 05 / 2026</strong>
-    </div>
-    <div class="hero-corner hero-corner-tr"></div>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <p class="hero-kicker">Industrial Engineering student · BINUS University, Jakarta</p>
+            <h1 class="hero-name">Made Adistha Subaga</h1>
+            <p class="hero-lead">
+              I design processes, model parts in CAD, and build software. Looking for internships in
+              process improvement, quality assurance, and engineering.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#work" class="btn btn-primary">View projects</a>
+              <a href="mailto:madeadistha@gmail.com" class="btn btn-outline-dark">Email me</a>
+            </div>
 
-    <div class="row align-items-end gx-5 hero-main">
-      <div class="col-lg-7 hero-headline hero-enter">
-        <div class="hero-eyebrow">PORTFOLIO — INDUSTRIAL ENGINEER</div>
-        <h1 class="hero-name">
-          <span class="made">Made</span>
-          <span class="adistha">Adistha</span>
-          <span class="subaga">Subaga.</span>
-        </h1>
-      </div>
-      <div class="col-lg-5 hero-portrait">
-        <div class="hero-portrait-frame">
-          <div class="hero-portrait-meta">Fig. 01</div>
-          <img src="assets/me.jpg" alt="Made Adistha Subaga, portrait" style="object-fit: cover" />
-          <div class="hero-portrait-caption">— The subject, photographed 2025.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row align-items-end gx-5 hero-foot">
-      <div class="col-lg-7 hero-tagline-wrap">
-        <div class="hero-tagline">
-          I'm currently <span class="typed" id="typed"></span><span class="cursor"></span>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-value"><em>3.62</em></div>
-            <div class="hero-stat-label">Cumulative GPA</div>
+            <dl class="hero-facts row row-cols-3 g-0">
+              <div class="col">
+                <dt>Cumulative GPA</dt>
+                <dd>3.62</dd>
+              </div>
+              <div class="col">
+                <dt>Roles since 2019</dt>
+                <dd>7</dd>
+              </div>
+              <div class="col">
+                <dt>EcoScooter Competition 2024</dt>
+                <dd>2nd</dd>
+              </div>
+            </dl>
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">7</div>
-            <div class="hero-stat-label">Roles Held</div>
+          <div class="col-lg-5">
+            <img class="hero-portrait" src="assets/me.jpg" alt="Portrait of Made Adistha Subaga" width="640" height="800">
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="manifesto" id="manifesto">
-    <div class="row gx-5">
-      <aside class="col-lg-2 manifesto-label reveal">
-        <span class="num">01</span>
-        Statement
-      </aside>
-      <div class="col-lg-8 manifesto-body reveal delay-1">
-        <p>I work where the <em>physical</em> meets the <em>digital</em> <span class="small">— Statement of practice</span> — designing systems, drawing parts, shipping code. Engineering rigor with a programmer's curiosity.</p>
-        <p>My discipline is <em>industrial engineering</em>; my fluency is the in-between.</p>
-      </div>
-      <aside class="col-lg-2 manifesto-aside reveal delay-2">
-        <strong>Disciplines</strong>
-        Engineering<br>
-        Game Development<br>
-        Data &amp; Process<br><br>
-        <strong>Based</strong>
-        Jakarta, Indonesia<br><br>
-        <strong>Currently</strong>
-        BINUS University<br>
-        Industrial Engineering Undergraduate<br>
-        GPA 3.62
-      </aside>
-    </div>
-  </section>
-
-  <section class="index">
-    <div class="index-label">
-      <span>Table of Contents</span>
-      <span>Five Items</span>
-    </div>
-    <div class="index-list">
-      <a href="#about" class="index-row reveal">
-        <span class="index-num">02 /</span>
-        <span class="index-title">On <em>Identity</em></span>
-        <span class="index-meta">Bio · Skills · Award</span>
-        <span class="index-arrow">→</span>
-      </a>
-      <a href="#experience" class="index-row reveal delay-1">
-        <span class="index-num">03 /</span>
-        <span class="index-title">On <em>Experience</em></span>
-        <span class="index-meta">Seven Roles · 2019–Now</span>
-        <span class="index-arrow">→</span>
-      </a>
-      <a href="#work" class="index-row reveal delay-2">
-        <span class="index-num">04 /</span>
-        <span class="index-title">On <em>Work</em></span>
-        <span class="index-meta">Three Featured · Four More</span>
-        <span class="index-arrow">→</span>
-      </a>
-      <a href="#contact" class="index-row reveal delay-3">
-        <span class="index-num">05 /</span>
-        <span class="index-title">On <em>Contact</em></span>
-        <span class="index-meta">Four Channels</span>
-        <span class="index-arrow">→</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="section-marker reveal">
-      <span class="section-marker-num">02</span>
-      <span class="section-marker-meta">On <strong>Identity</strong></span>
-    </div>
-
-    <h2 class="section-headline reveal delay-1">
-      An <em>engineer</em> who codes,<br>
-      a <em>coder</em> who engineers.
-    </h2>
-
-    <div class="row gx-5">
-      <div class="col-lg-6 about-bio reveal">
-        <p>I'm an <em>Industrial Engineering student</em> at BINUS University with hands-on experience in laboratory operations, teaching assistance, and technical project work.</p>
-        <p>My work moves between <em>CAD/CAM engineering</em>, <em>game development</em>, and <em>data-driven process improvement</em> — with a growing focus on process improvement and quality assurance.</p>
-        <p>Reliable, detail-oriented, and results-driven — I'm actively seeking roles where engineering rigor and digital craft intersect.</p>
-
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="about-stat-value"><em>3.62</em></div>
-            <div class="about-stat-label">Cumulative GPA</div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-5 reveal">
+            <h2 class="section-title">An engineer who codes, a coder who engineers.</h2>
+            <div class="prose">
+              <p>I'm an Industrial Engineering student at BINUS University with hands-on experience in laboratory operations, teaching assistance, and technical project work.</p>
+              <p>My work moves between CAD/CAM engineering, game development, and data-driven process improvement, with a growing focus on process improvement and quality assurance.</p>
+              <p>I'm reliable and detail-oriented, and I'm looking for roles where engineering rigor and software meet.</p>
+            </div>
           </div>
-          <div class="about-stat">
-            <div class="about-stat-value">7</div>
-            <div class="about-stat-label">Roles Held<br>Since 2019</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-value">6<em>+</em></div>
-            <div class="about-stat-label">Projects<br>Shipped</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-value">2<em>nd</em></div>
-            <div class="about-stat-label">EcoScooter<br>Competition '24</div>
+
+          <div class="col-lg-6 offset-lg-1 reveal">
+            <dl class="spec">
+              <div class="spec-row row">
+                <dt class="col-sm-4">Education</dt>
+                <dd class="col-sm-8">
+                  <strong>BINUS University</strong>, Bachelor's in Industrial Engineering<br>
+                  <span class="muted">2023 – present · GPA 3.62 / 4.00</span>
+                </dd>
+              </div>
+              <div class="spec-row row">
+                <dt class="col-sm-4">Recognition</dt>
+                <dd class="col-sm-8">
+                  <strong>2nd place</strong>, EcoScooter Innovation Competition 2024
+                </dd>
+              </div>
+              <div class="spec-row row">
+                <dt class="col-sm-4">Skills</dt>
+                <dd class="col-sm-8">
+                  <h3 class="skill-head">Engineering &amp; design</h3>
+                  <p class="skill-list">Autodesk Inventor, AutoCAD, Blender, technical drawing, ergonomics</p>
+                  <h3 class="skill-head">Programming &amp; data</h3>
+                  <p class="skill-list">Python, C, C#, SQL, HTML, CSS, JavaScript, Power BI, Excel</p>
+                  <h3 class="skill-head">Game development</h3>
+                  <p class="skill-list">Unity, C# scripting, game UI, VFX, AI behaviour</p>
+                </dd>
+              </div>
+              <div class="spec-row row">
+                <dt class="col-sm-4">Languages</dt>
+                <dd class="col-sm-8">Indonesian, English</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-6 about-meta reveal delay-1">
-        <div class="about-meta-block">
-          <div class="about-meta-label">Engineering &amp; Design</div>
-          <div class="about-skill-list">
-            <span>Autodesk Inventor</span>
-            <span>AutoCAD</span>
-            <span>Blender 3D</span>
-            <span>Technical Drawing</span>
-            <span>Ergonomics</span>
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+
+        <ol class="xp-list">
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Jul 2025 – <span class="xp-now">Present</span></div>
+            <div class="col-md-9">
+              <h3 class="xp-role">Junior Laboratory Assistant</h3>
+              <p class="xp-org">BINUS University · Industrial Engineering Lab</p>
+              <p class="xp-desc">Maintaining laboratory operations and equipment readiness, supporting students through practical sessions, monitoring departmental KPIs, and contributing to initiatives like the EcoScooter innovation project.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Jan 2025 – Jul 2025</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">Teaching Assistant, Human-Integrated Systems Lab</h3>
+              <p class="xp-org">BINUS University</p>
+              <p class="xp-desc">Guided students through ergonomics, work measurement, and human–machine interaction experiments, from data collection to analysis, and evaluated assignments and lab reports against academic standards.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Sep 2024 – Jan 2025</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">Teaching Assistant, Technical Drawing Lab</h3>
+              <p class="xp-org">BINUS University</p>
+              <p class="xp-desc">Delivered lectures to six classes on engineering drawing standards and AutoCAD / Autodesk Inventor workflows, and updated the practicum module to match course objectives and industry standards.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Aug 2023 – Dec 2025</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">Program Management Staff</h3>
+              <p class="xp-org">IISE BINUS University</p>
+              <p class="xp-desc">Managing committee member for assigned IISE programs and events.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Jun 2023 – Aug 2023</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">CAD/CAM Engineer Intern</h3>
+              <p class="xp-org">CV Matahari Terbit</p>
+              <p class="xp-desc">Developed CAD-to-CAM programs for manufacturing, produced 2D technical drawings for operators, designed molds from scratch, and operated jig-based and lathe machining setups.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Jan 2021 – Jun 2021</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">Head of Web Development, 2020 Gonzaga Festival</h3>
+              <p class="xp-org">SMA Kolese Gonzaga</p>
+              <p class="xp-desc">Led a team of developers to design, build, and deploy the festival's official website on time, working with organizers and testing across devices and browsers.</p>
+            </div>
+          </li>
+          <li class="xp row reveal">
+            <div class="col-md-3 xp-date">Jul 2019 – Jul 2020</div>
+            <div class="col-md-9">
+              <h3 class="xp-role">President, Computer Club</h3>
+              <p class="xp-org">SMA Kolese Gonzaga</p>
+              <p class="xp-desc">Led the club and its classes in software development, web development, game development, and design.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="work">
+      <div class="container">
+        <h2 class="section-title reveal">Selected projects</h2>
+
+        <!-- Featured: full row -->
+        <article class="project project-featured row align-items-center gy-4 reveal">
+          <div class="col-lg-7">
+            <img class="project-img" src="assets/scotera.png" alt="SCOTERA electric scooter prototype" loading="lazy" width="747" height="496">
           </div>
-        </div>
-        <div class="about-meta-block">
-          <div class="about-meta-label">Programming &amp; Data</div>
-          <div class="about-skill-list">
-            <span>Python</span>
-            <span>C</span>
-            <span>C#</span>
-            <span>SQL</span>
-            <span>HTML/CSS/JS</span>
-            <span>Power BI</span>
-            <span>Excel</span>
+          <div class="col-lg-5">
+            <p class="project-meta">Engineering · Nov 2024 – Dec 2025 · 2nd place, 2024</p>
+            <h3 class="project-title">SCOTERA EcoScooter</h3>
+            <p class="project-desc">A sustainable electric scooter prototype for campus and urban mobility, developed through ergonomic design, product development iterations, and engineering feasibility studies.</p>
+            <p class="project-tech">Autodesk Inventor · AutoCAD · Blender · Ergonomic analysis</p>
+            <a class="link-ext" href="https://binus.ac.id/kemanggisan/2025/12/04/mahasiswa-teknik-industri-binus-university-hadirkan-inovasi-kendaraan-ramah-lingkungan-scotera-resmi-diluncurkan-di-binus-kemanggisan-anggrek-campus/" target="_blank" rel="noopener">Read the launch article</a>
           </div>
-        </div>
-        <div class="about-meta-block">
-          <div class="about-meta-label">Game Development</div>
-          <div class="about-skill-list">
-            <span>Unity</span>
-            <span>C# Scripting</span>
-            <span>Game Design</span>
-            <span>AI Behaviour</span>
-          </div>
+        </article>
+
+        <!-- Two per row -->
+        <div class="row row-cols-1 row-cols-md-2 gx-5 gy-5 project-grid">
+          <article class="col project reveal">
+            <img class="project-img" src="assets/taleofzaggar.png" alt="Tale of Zaggar game key art" loading="lazy" width="960" height="600">
+            <p class="project-meta">Game development · BGDC Talent Group 2022</p>
+            <h3 class="project-title">Tale of Zaggar</h3>
+            <p class="project-desc">A turn-based RPG built in Unity. I designed the special effects and game UI, and programmed the UI.</p>
+            <p class="project-tech">Unity · C# · Game UI · VFX</p>
+            <a class="link-ext" href="https://itch.io/devlog/423885/update-2.amp" target="_blank" rel="noopener">View on itch.io</a>
+          </article>
+          <article class="col project reveal">
+            <img class="project-img" src="assets/11034.png" alt="11,034 game key art" loading="lazy" width="1920" height="1080">
+            <p class="project-meta">Game development · BGDC Talent Group 2021</p>
+            <h3 class="project-title">11,034</h3>
+            <p class="project-desc">A first-person shooter set 11,034 metres down, at the world's deepest point. I designed and programmed the enemy AI and the game UI. A sequel is in development.</p>
+            <p class="project-tech">Unity · C# · AI behaviour · Game UI</p>
+            <a class="link-ext" href="https://bgdc.itch.io/11034" target="_blank" rel="noopener">Play on itch.io</a>
+          </article>
         </div>
 
-        <div class="about-award">
-          <div class="about-award-num">2<sup style="font-size:0.4em;">nd</sup></div>
-          <div class="about-award-text">
-            <div class="about-award-title">EcoScooter Innovation Competition <em>2024</em></div>
-            <div class="about-award-sub">Sustainable mobility · Ergonomic engineering</div>
+        <!-- Coursework: two per row, text only -->
+        <h3 class="subsection-title reveal">Coursework &amp; other projects</h3>
+        <div class="row row-cols-1 row-cols-md-2 gx-5 gy-4">
+          <article class="col minor reveal">
+            <p class="project-meta">May 2026 – Jun 2026</p>
+            <h4 class="minor-title">Smart Warehouse Management System</h4>
+            <p class="minor-desc">A full-stack system for inventory management, stock monitoring, and warehouse transactions, with a responsive frontend, backend APIs, and database integration.</p>
+          </article>
+          <article class="col minor reveal">
+            <p class="project-meta">Sep 2025 – Dec 2025</p>
+            <h4 class="minor-title">E-Supply Chain Management Laboratory</h4>
+            <p class="minor-desc">Led data collection, processing, and analysis for the final research report, then presented and defended the findings to expert lecturers.</p>
+          </article>
+          <article class="col minor reveal">
+            <p class="project-meta">Feb 2025 – Jun 2025</p>
+            <h4 class="minor-title">Production &amp; Operation Analysis Laboratory</h4>
+            <p class="minor-desc">Forecast headset demand with time-series decomposition, moving average, Holt's and Winter's methods, then built the aggregate plan, MPS, MRP, lot sizing, and operations schedule.</p>
+          </article>
+          <article class="col minor reveal">
+            <p class="project-meta">Feb 2024 – Jun 2024</p>
+            <h4 class="minor-title">Human-Integrated Systems Final Project</h4>
+            <p class="minor-desc">Redesigned a whiteboard eraser with an extendable handle and grooved grip using ergonomic principles, with time-motion analysis, a SketchUp classroom layout, and a Figma store mockup.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-6 reveal">
+            <h2 class="section-title">Let's talk.</h2>
+            <p class="prose">I'm open to internships, collaborative projects, and conversations about engineering, tech, or game development.</p>
+            <a href="mailto:madeadistha@gmail.com" class="btn btn-primary">Email me</a>
+          </div>
+          <div class="col-lg-5 offset-lg-1 reveal">
+            <dl class="contact-list">
+              <div class="contact-row">
+                <dt>Email</dt>
+                <dd><a href="mailto:madeadistha@gmail.com">madeadistha@gmail.com</a></dd>
+              </div>
+              <div class="contact-row">
+                <dt>Phone</dt>
+                <dd><a href="tel:+6287782605442">+62 877 8260 5442</a></dd>
+              </div>
+              <div class="contact-row">
+                <dt>LinkedIn</dt>
+                <dd><a href="https://www.linkedin.com/in/made-adistha-s-43b4741b3/" target="_blank" rel="noopener">Made Adistha Subaga</a></dd>
+              </div>
+              <div class="contact-row">
+                <dt>Instagram</dt>
+                <dd><a href="https://www.instagram.com/made_adistha" target="_blank" rel="noopener">@made_adistha</a></dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="section" id="experience">
-    <div class="section-marker reveal">
-      <span class="section-marker-num">03</span>
-      <span class="section-marker-meta">On <strong>Experience</strong> · 2019 — Present</span>
-    </div>
-
-    <h2 class="section-headline reveal delay-1">
-      Seven roles,<br>
-      one <em>through-line.</em>
-    </h2>
-
-    <div class="timeline">
-      <div class="tl-row current reveal row gx-5">
-        <div class="col-lg-2 tl-date">
-          Jul 2025<br>
-          <strong>Present</strong>
-          <div class="tl-current">Current</div>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">Junior Laboratory Assistant</div>
-          <div class="tl-org">BINUS University · Industrial Engineering Lab</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Maintaining laboratory operations and equipment readiness, supporting students through practical sessions, monitoring departmental KPIs, and contributing to initiatives like the EcoScooter innovation project.
-        </div>
-      </div>
-
-      <div class="tl-row reveal delay-1 row gx-5">
-        <div class="col-lg-2 tl-date">
-          Jan 2025<br>
-          <strong>Jul 2025</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">Teaching Assistant — <em>HIS</em></div>
-          <div class="tl-org">BINUS University · Human-Integrated Systems</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Guided students through ergonomics, work measurement, and human–machine interaction experiments — from data collection to analysis — and evaluated assignments and lab reports against academic standards.
-        </div>
-      </div>
-
-      <div class="tl-row reveal delay-2 row gx-5">
-        <div class="col-lg-2 tl-date">
-          Sep 2024<br>
-          <strong>Jan 2025</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">Teaching Assistant — <em>Drawing</em></div>
-          <div class="tl-org">BINUS University · Technical Drawing</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Delivered lectures to six classes on engineering drawing standards and AutoCAD / Autodesk Inventor workflows, and developed the practicum module to align with course objectives and industry standards.
-        </div>
-      </div>
-
-      <div class="tl-row reveal delay-3 row gx-5">
-        <div class="col-lg-2 tl-date">
-          Aug 2023<br>
-          <strong>Dec 2025</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">Program Management Staff</div>
-          <div class="tl-org">IISE BINUS University</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Part of the managing committee for assigned IISE programs and events for the industrial engineering community.
-        </div>
-      </div>
-
-      <div class="tl-row reveal row gx-5">
-        <div class="col-lg-2 tl-date">
-          Jun 2023<br>
-          <strong>Aug 2023</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">CAD/CAM Engineering <em>Intern</em></div>
-          <div class="tl-org">CV Matahari Terbit</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Developed CAD-to-CAM programs for manufacturing, produced 2D technical drawings for operators, designed molds from scratch, and operated jig-based and lathe machining setups.
-        </div>
-      </div>
-
-      <div class="tl-row reveal row gx-5">
-        <div class="col-lg-2 tl-date">
-          Jan 2021<br>
-          <strong>Jun 2021</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">Head of <em>Web Development</em></div>
-          <div class="tl-org">2020 Gonzaga Festival · SMA Kolese Gonzaga</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Led a team of developers to design, build, and deploy the festival's official website on time — coordinating with organizers and ensuring functionality across devices and browsers.
-        </div>
-      </div>
-
-      <div class="tl-row reveal row gx-5">
-        <div class="col-lg-2 tl-date">
-          Jul 2019<br>
-          <strong>Jul 2020</strong>
-        </div>
-        <div class="col-lg-4 tl-role-wrap">
-          <div class="tl-role">President, <em>Computer Club</em></div>
-          <div class="tl-org">SMA Kolese Gonzaga</div>
-        </div>
-        <div class="col-lg-6 tl-desc">
-          Led the high school computer club and its classes across software development, web development, game development, and design.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="work" id="work">
-    <div class="work-inner">
-      <div class="section-marker reveal">
-        <span class="section-marker-num">04</span>
-        <span class="section-marker-meta">On <strong>Work</strong> · Selected pieces</span>
-      </div>
-
-      <h2 class="section-headline reveal delay-1" style="margin-bottom:40px;">
-        Things I've <em>built.</em>
-      </h2>
-    </div>
-
-    <div class="work-list">
-      <article class="proj reveal row gx-5 align-items-center">
-        <div class="col-lg-7 proj-image-col">
-          <div class="proj-image">
-            <div class="proj-image-num">№ 01 / 03</div>
-            <img src="assets/scotera.png" alt="SCOTERA EcoScooter prototype" />
-          </div>
-        </div>
-        <div class="col-lg-5 proj-content">
-          <div class="proj-meta">
-            <span class="proj-meta-tag accent">Engineering</span>
-            <span class="proj-meta-tag">Award 2024</span>
-            <span>Nov 2024 — Dec 2025</span>
-          </div>
-          <h3 class="proj-title">SCOTERA <em>EcoScooter.</em></h3>
-          <p class="proj-desc">
-            An award-winning sustainable electric scooter prototype — focused on <em>ergonomic design</em>, product development iterations, and engineering feasibility for campus and urban mobility.
-          </p>
-          <div class="proj-tech">
-            <span>Autodesk Inventor</span>
-            <span>AutoCAD</span>
-            <span>Blender</span>
-            <span>Ergonomic Analysis</span>
-          </div>
-          <a href="https://binus.ac.id/kemanggisan/2025/12/04/mahasiswa-teknik-industri-binus-university-hadirkan-inovasi-kendaraan-ramah-lingkungan-scotera-resmi-diluncurkan-di-binus-kemanggisan-anggrek-campus/" target="_blank" rel="noopener" class="proj-link">
-            View Details
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="proj reveal row gx-5 align-items-center">
-        <div class="col-lg-7 proj-image-col order-lg-2">
-          <div class="proj-image">
-            <div class="proj-image-num">№ 02 / 03</div>
-            <img src="assets/taleofzaggar.png" alt="Tale of Zaggar — game key art" />
-          </div>
-        </div>
-        <div class="col-lg-5 proj-content order-lg-1">
-          <div class="proj-meta">
-            <span class="proj-meta-tag accent">Game Dev</span>
-            <span class="proj-meta-tag">Unity · C#</span>
-            <span>BGDC Talent Group 2022</span>
-          </div>
-          <h3 class="proj-title">Tale of <em>Zaggar.</em></h3>
-          <p class="proj-desc">
-            A turn-based RPG built in Unity with BGDC Talent Group — I focused on <em>special effects</em>, game UI design, and UI programming across a moody, atmospheric world.
-          </p>
-          <div class="proj-tech">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>Game UI</span>
-            <span>VFX</span>
-          </div>
-          <a href="https://itch.io/devlog/423885/update-2.amp" target="_blank" rel="noopener" class="proj-link">
-            View Details
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="proj reveal row gx-5 align-items-center">
-        <div class="col-lg-7 proj-image-col">
-          <div class="proj-image">
-            <div class="proj-image-num">№ 03 / 03</div>
-            <img src="assets/11034.png" alt="11,034 — FPS game key art" />
-          </div>
-        </div>
-        <div class="col-lg-5 proj-content">
-          <div class="proj-meta">
-            <span class="proj-meta-tag accent">Game Dev</span>
-            <span class="proj-meta-tag">FPS · AI</span>
-            <span>BGDC Talent Group 2021</span>
-          </div>
-          <h3 class="proj-title"><em>11,034.</em></h3>
-          <p class="proj-desc">
-            A first-person shooter set <em>11,034 meters below the surface</em> at the world's deepest point — I designed and programmed AI bot behaviour and the game UI.
-          </p>
-          <div class="proj-tech">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>AI Behaviour</span>
-            <span>Game UI</span>
-          </div>
-          <a href="https://bgdc.itch.io/11034" target="_blank" rel="noopener" class="proj-link">
-            View Details
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="proj coming-soon reveal row gx-5 align-items-center">
-        <div class="col-lg-7 proj-image-col order-lg-2">
-          <div class="proj-image">
-            <div class="proj-image-num">№ 04 / —</div>
-            <img src="assets/11034.png" alt="11,034 2 — coming soon" />
-          </div>
-        </div>
-        <div class="col-lg-5 proj-content order-lg-1">
-          <div class="proj-meta">
-            <span class="proj-meta-tag">In Development</span>
-            <span>Sequel</span>
-          </div>
-          <h3 class="proj-title"><em>11,034</em> 2.</h3>
-          <p class="proj-desc">Coming Soon.</p>
-        </div>
-      </article>
-    </div>
-
-    <div class="work-inner academic">
-      <div class="academic-head reveal">
-        <span class="academic-head-title">Further <em>Projects.</em></span>
-        <span class="academic-head-meta">Coursework &amp; Software<br>Four entries</span>
-      </div>
-      <div class="academic-list row gx-5">
-        <div class="col-md-6 acad reveal">
-          <div class="acad-index">
-            <span class="acad-num">i</span>
-            <span class="acad-date">May 2026 — Jun 2026</span>
-          </div>
-          <h4 class="acad-title">Smart Warehouse Management System</h4>
-          <p class="acad-desc">
-            A full-stack system for <em>inventory management</em>, stock monitoring, and warehouse transactions — responsive frontend interfaces, backend APIs, and database integration, built with software engineering best practices and AI-assisted development tools.
-          </p>
-        </div>
-        <div class="col-md-6 acad reveal delay-1">
-          <div class="acad-index">
-            <span class="acad-num">ii</span>
-            <span class="acad-date">Sep 2025 — Dec 2025</span>
-          </div>
-          <h4 class="acad-title">E-Supply Chain Management Laboratory</h4>
-          <p class="acad-desc">
-            Led the work process, <em>data collection</em>, processing, and analysis for the final research report — showcased as a presentation and project defense, extracting validated insights from expert lecturers.
-          </p>
-        </div>
-        <div class="col-md-6 acad reveal">
-          <div class="acad-index">
-            <span class="acad-num">iii</span>
-            <span class="acad-date">Feb 2025 — Jun 2025</span>
-          </div>
-          <h4 class="acad-title">Production &amp; Operation Analysis Laboratory</h4>
-          <p class="acad-desc">
-            Analyzed headset sales datasets to optimize production efficiency. Conducted <em>demand forecasting</em> using TSD, Moving Average, Holt's and Winter's methods — followed by aggregate planning, MPS, MRP, lot sizing, and operations scheduling.
-          </p>
-        </div>
-        <div class="col-md-6 acad reveal delay-1">
-          <div class="acad-index">
-            <span class="acad-num">iv</span>
-            <span class="acad-date">Feb 2024 — Jun 2024</span>
-          </div>
-          <h4 class="acad-title">Human Integrated Systems Final Project</h4>
-          <p class="acad-desc">
-            Applied <em>ergonomic principles</em> to redesign a whiteboard eraser with an extendable cane and grooved hand grip. Conducted time-motion analysis, 3D classroom layout optimization in SketchUp, and a website store mockup in Figma.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="section-marker reveal">
-      <span class="section-marker-num">05</span>
-      <span class="section-marker-meta">On <strong>Contact</strong></span>
-    </div>
-
-    <h2 class="contact-headline reveal delay-1">
-      Let's <em>talk.</em> <span class="arrow">↗</span>
-    </h2>
-
-    <div class="row gx-5">
-      <div class="col-lg-6 reveal">
-        <p class="contact-intro">
-          I'm open to <em>internship opportunities</em>, collaborative projects, and conversations about engineering, tech, or game development. Pick the channel that suits you.
-        </p>
-        <div class="contact-cta">
-          <a href="mailto:madeadistha@gmail.com" class="btn btn-primary">
-            Send an Email
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-          </a>
-          <a href="https://binusianorg-my.sharepoint.com/personal/made_subaga_binus_ac_id/_layouts/15/guestaccess.aspx?share=IQBMxfUKrtHSTbD978OrAGoyAfgr2kdaMogI4ihSwrYRbgY&rtime=cph4cLu83kg"
-             target="_blank" rel="noopener" class="btn btn-outline">
-            View My Resume
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8 L8 2 M3 2 H8 V7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-6 contact-list reveal delay-1">
-        <a href="mailto:madeadistha@gmail.com" class="contact-row">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">madeadistha@gmail.com</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-        <a href="tel:+6287782605442" class="contact-row">
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">+62 877 8260 5442</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-        <a href="https://www.linkedin.com/in/made-adistha-s-43b4741b3/" target="_blank" rel="noopener" class="contact-row">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">Made Adistha Subaga</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-        <a href="https://www.instagram.com/made_adistha" target="_blank" rel="noopener" class="contact-row">
-          <span class="contact-label">Instagram</span>
-          <span class="contact-value">@made_adistha</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="colophon">
-    <div class="row gx-5">
-      <div class="col-md-4">
-        <strong>© Made Adistha Subaga, 2026</strong><br>
-        All work, photography, and writing<br>
-        by the author unless noted.
-      </div>
-      <div class="col-md-4 colophon-center">
-        <span class="colophon-mark">— End of Index —</span><br>
-        Set in Instrument Serif &amp; Space Grotesk<br>
-        Printed on warm cream, hand-numbered.
-      </div>
-      <div class="col-md-4 colophon-right">
-        <strong>BINUS University</strong><br>
-        Industrial Engineering<br>
-        Jakarta, Indonesia
-      </div>
+  <footer class="site-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Made Adistha Subaga</span>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
@@ -589,6 +320,5 @@
 
   <script type="text/babel" src="tweaks-panel.jsx"></script>
   <script type="text/babel" src="tweaks.jsx"></script>
-
 </body>
 </html>

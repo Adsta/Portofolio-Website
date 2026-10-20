@@ -1,15 +1,15 @@
-/* Palette shared with the Papan Produksi (MES) app. Variable names are also used by tweaks.jsx — keep them. */
+/* Papan Produksi (MES) palette. light-dark() follows the system; the switch pins it via data-theme. */
 :root {
-  color-scheme: light;
-  --paper:     #f3f5f8;
-  --paper-2:   #ffffff;
-  --ink:       #17212b;
-  --ink-2:     #33414f;
-  --ink-3:     #4d5a68;
-  --rule:      #d8dee6;
-  --accent:    #1264d6;
-  --accent-2:  #0d4fae;
-  --on-accent: #ffffff;
+  color-scheme: light dark;
+  --paper:     light-dark(#f3f5f8, #0d1117);
+  --paper-2:   light-dark(#ffffff, #151b23);
+  --ink:       light-dark(#17212b, #e6edf3);
+  --ink-2:     light-dark(#33414f, #c9d1d9);
+  --ink-3:     light-dark(#4d5a68, #9ba7b4);
+  --rule:      light-dark(#d8dee6, #2b333d);
+  --accent:    light-dark(#1264d6, #e3b341);
+  --accent-2:  light-dark(#0d4fae, #f0c75e);
+  --on-accent: light-dark(#ffffff, #0d1117);
 
   /* Instrument Serif: display only. IBM Plex Sans: engineered, technical-drawing
      character that suits an industrial engineer, and readable at body sizes. */
@@ -21,30 +21,13 @@
   --bs-body-font-family: var(--sans);
   --bs-body-font-size: 1.0625rem;
   --bs-body-line-height: 1.65;
-  --bs-body-color: var(--ink-2);
-  --bs-body-bg: var(--paper);
   --bs-border-color: var(--rule);
 }
-
-/* Dark: follows the system unless the switch picked a theme */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --paper: #0d1117; --paper-2: #151b23;
-    --ink: #e6edf3; --ink-2: #c9d1d9; --ink-3: #9ba7b4; --rule: #2b333d;
-    --accent: #e3b341; --accent-2: #f0c75e; --on-accent: #0d1117;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --paper: #0d1117; --paper-2: #151b23;
-  --ink: #e6edf3; --ink-2: #c9d1d9; --ink-3: #9ba7b4; --rule: #2b333d;
-  --accent: #e3b341; --accent-2: #f0c75e; --on-accent: #0d1117;
-}
-body { background: var(--paper); color: var(--ink-2); }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }
 
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body { -webkit-font-smoothing: antialiased; }
+body { background: var(--paper); color: var(--ink-2); -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--accent); color: var(--on-accent); }
 
 /* Readable measure on wide screens */
